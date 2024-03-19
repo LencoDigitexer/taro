@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1990s Style Website</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <a  class="btn" id="btn">
+            <img src="img/candleinholder.gif" alt="Candle in Holder">
+            Войти в замок
+        </a>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <script>
+        document.getElementById('btn').onclick = function() {
+            document.getElementById('overlay').style.display = 'block';
+            setTimeout(function() {
+                window.location.href = 'main.html';
+            }, 1000); // Задержка в 1 секунду перед переходом
+        };
+    </script>
+
+</body>
+</html>
