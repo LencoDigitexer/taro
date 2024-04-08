@@ -9,16 +9,25 @@
 <body>
 
     <div class="container">
-        <a  class="btn" id="btn">
+        <a href="main.html" class="btn" id="btn">
             <img src="img/candleinholder.gif" alt="Candle in Holder">
             Войти в замок
+        </a>
+    </div>
+        <a  class="btn" id="btn">
+            <img src="https://web.archive.org/web/20091026225409/http://geocities.com/~rebra/autoras/book3.gif" alt="Candle in Holder">
+            ИНСТРУКЦИЯ
+        </a>
+        <a  class="btn" id="btn">
+            <img src="https://web.archive.org/web/20091021130012/http://www.geocities.com/cuddlyoldbear/book_brown.gif" alt="Candle in Holder">
+            ПОЧЕМУ МЫ?
         </a>
     </div>
 
     <div class="overlay" id="overlay"></div>
 
     <script>
-        document.getElementById('btn').onclick = function() {
+        document.getElementById('btn1').onclick = function() {
             document.getElementById('overlay').style.display = 'block';
             setTimeout(function() {
                 window.location.href = 'main.html';

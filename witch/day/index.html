@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>КАРТА ДНЯ</title>
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div>
+  <div id="randomNumber"></div>
+
+</div>
+<div>
+  <img id="randomImage" src="../../img/card/waite/back.jpg" alt="Random Image">
+</div>
+<button  class="btn" id="randomButton">
+    <img src="https://web.archive.org/web/20091026175411/http://www.geocities.com/mockswyrm/goth/dicereds.gif">
+    ГАДАТЬ
+</button>
+
+<script>
+async function fetchRandomNumberAndImage() {
+  try {
+    const response = await fetch('https://qvantum-random.vercel.app/api/random');
+    const data = await response.json();
+    const randomNumber = data.number;
+    const randomNumberDiv = document.getElementById('randomNumber');
+    // randomNumberDiv.textContent = `Random Number: ${randomNumber}`;
+    const randomImage = document.getElementById('randomImage');
+    // Устанавливаем src изображения на основе полученного номера
+    randomImage.src = `../../img/card/waite/${randomNumber}.jpg`;
+    
+  } catch (error) {
+    console.error('Error fetching random number:', error);
+  }
+}
+
+
+// Добавляем обработчик события клика на кнопку "рандом"
+document.getElementById('randomButton').addEventListener('click', fetchRandomNumberAndImage);
+</script>
+</body>
+</html>

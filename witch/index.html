@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ГАДАНИЕ У ВЕДЬМЫ</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+      /* Стиль для <marquee> */
+      #bottom-marquee {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+              
+        width: 110px;
+        height: 210px;
+      }
+  
+          @keyframes myAnimation {
+              0% {
+                  bottom: 0;
+                  left: 90%; /* Изменено на 100% */
+                  transform: translate(0) translateY(0);
+              }
+              100% {
+                  bottom: 0;
+                  left: -100%;
+                  transform: translateX(0) translateY(0);
+              }
+          }
+    </style>
+    
+  <body>
+
+    <div class="container">
+        <a  href="../" class="btn" id="btn">
+            <img src="../img/dooropen.gif" alt="Candle in Holder">
+            ВЫЙТИ НА УЛИЦУ
+        </a>
+    </div>
+
+    <div class="container">
+        
+    </div>
+
+    <div class="container">
+        <a href="day/" class="btn" id="btn">
+            <img src="../img/an-sun.gif" alt="Candle in Holder">
+            КАРТА ДНЯ
+        </a>
+        <a  class="btn" id="btn">
+            <img src="../img/TAROTspinning.gif" alt="Candle in Holder">
+            ПРОШЛОЕ - НАСТОЯЩЕЕ - БУДУЩЕЕ
+        </a>
+        <a  class="btn" id="btn">
+            <img src="https://web.archive.org/web/20090830035154/http://geocities.com/Heartland/Ranch/5160/rotatingquestionmark.gif" alt="Candle in Holder">
+            ГАДАНИЕ НА ОТВЕТ (ДА или НЕТ)
+        </a>
+        
+    </div>
+    <br><br><br><br><br><br>
+    <marquee id="bottom-marquee" behavior="slide" scrollamount="25">
+      <img id="robot-image" src="../img/femalewizard.gif" width="100px" onclick="changeImageAndMove()">
+    </marquee>
+
+    <script>
+      function changeImageAndMove() {
+        var image = document.getElementById("robot-image");
+        var div = document.getElementById("bottom-marquee");
+  
+        if (image.src.endsWith("femalewizard.gif")) {
+          image.src = "https://web.archive.org/web/20090902045708/http://geocities.com/witchowllee/images/graphics-by-dove/dove24.gif";
+          div.style.animation = "myAnimation 10s"
+                  div.style.left = "-100%";
+        }
+      }
+    </script>
+
+  </body>
+</html>
