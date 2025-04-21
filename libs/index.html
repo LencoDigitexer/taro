@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магическая Библиотека | Запретные Тома</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background-image: url('../img/bgstar.gif');
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .library-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(5px);
+            padding: 10px;
+            z-index: 999;
+        }
+
+        .nav-link {
+            color: #ff69b4;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            transform: scale(1.1);
+        }
+
+        .bookshelf {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding-top: 60px;
+            max-width: 1200px;
+            width: 90%;
+        }
+
+        .book-card {
+            background: rgba(0,0,0,0.7);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px #ff69b4;
+            transition: 0.3s;
+        }
+
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px #ff69b4;
+        }
+
+        .book-image {
+            width: 100%;
+            object-fit: cover;
+            filter: brightness(80%);
+            transition: 0.3s;
+        }
+
+        .book-image:hover {
+            filter: brightness(100%);
+        }
+
+        .book-details {
+            padding: 15px;
+            background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.5));
+        }
+
+        .book-title {
+            font-size: 24px;
+            color: #ff69b4;
+            margin: 0;
+            text-shadow: 0 0 5px #ff69b4;
+        }
+
+        .book-description {
+            font-size: 14px;
+            color: #fff;
+            margin: 10px 0;
+        }
+
+        .download-link {
+            display: inline-block;
+            padding: 8px 15px;
+            background: #ff69b4;
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .download-link:hover {
+            background: #ff1493;
+        }
+
+        @media (max-width: 768px) {
+            .bookshelf {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 40px;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            
+            background: linear-gradient(183deg, #6000CA 10%, #CA00CD 70%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            font-family: 'Impact';
+        }
+    </style>
+</head>
+<body>
+
+    <div class="library-header">
+        <a href="../main.html" class="nav-link">Замок</a>
+        <a href="../libs/ class="nav-link">Библиотека</a>
+        <a href="../instruction/" class="nav-link">Инструкция</a>
+        <a href="../about/" class="nav-link">Почему мы?</a>
+    </div>
+
+
+    <br><br><br><br><br><br><br>
+    <div class="container">
+        <p class="btn" id="btn">
+            <img src="../img/Image_Book.gif" alt="Candle in Holder">
+            Добро пожаловать в Магическую библиотеку
+        </p>
+    </div>
+    <div class="container">
+        <a  href="../" class="btn" id="btn">
+            <img src="../img/dooropen.gif" alt="Candle in Holder">
+            ВЫЙТИ НА УЛИЦУ
+        </a>
+    </div>
+
+    <div class="bookshelf">
+        
+
+
+        <div class="book-card">
+            <img src="img/книга мудрости.png" alt="книга мудрости" class="book-image">
+            <div class="book-details">
+                <h2 class="book-title">Книга Мудрости на русском языке</h2>
+                <p class="book-description">
+                    Автор: Возрождение истины  <br>
+                    Год выпуска: ????  <br>
+                    Язык: русский  <br><br>
+
+                    Русская версия книги Book of Wisdom - Volume one. Немного адаптированная и измененная
+
+                </p>
+                <a href="downloads/Книга Мудрости.pdf" class="download-link" target="_blank">Скачать PDF</a>
+            </div>
+        </div>
+
+        <!-- Book Card Template -->
+        <div class="book-card">
+            <img src="img/Book of Wisdom.png" alt="Book of Wisdom - Volume one" class="book-image">
+            <div class="book-details">
+                <h2 class="book-title">Book of Wisdom - Volume one</h2>
+                <p class="book-description">Для всех англоговорящих <br><br>
+
+                    Автор: Harry B. Joseph  <br>
+                    Издательство: самиздат  <br>
+                    Год выпуска: 2024  <br>
+                    Язык: английский  <br><br>
+                      
+                    Книга представляет собой систематизированный сборник сакральных знаний различных авторов и подсвечивает совпадения между конфессиями, мифами, философскими движениями, но не является истиной в последней инстанции.  
+                    Рекомендуется к прочтению на оригинальном языке, потому что автор иногда распаковывает языческие смыслы английских слов.</p>
+                <a href="downloads/Book Of Wisdom - Revival Of Wisdom.pdf" class="download-link" target="_blank">Скачать PDF</a>
+            </div>
+        </div>
+
+        <!-- Repeat this template for each book -->
+        <div class="book-card">
+            <img src="img/h4BFSpRpSrM.jpg" alt="Откровение Странника" class="book-image">
+            <div class="book-details">
+                <h2 class="book-title">Пробуждение. Первое откровение странника.</h2>
+                <p class="book-description">
+                    Автор: Маркиш Б. В.  <br>
+                    Издательство: самиздат  <br>
+                    Год выпуска: 2015  <br>
+                    Язык: русский  <br><br>
+
+                    Всю свою историю, человечество (люди) не имеют свободной воли и всю свою историю к ней же и стремится. Что это такое, почему это появляется, я и попробую дать объяснения в данном материале, в меру своего понимания и способностей объяснять. Эта книга написана доступным и простым языком, без заумных фраз и оборотов, но в тоже время заставит много раз отключится мозг. Поэтому в такие моменты стоит возвращаться к предыдущим страницам снова и снова, пока мозг не поймет. Этот момент будет как «Вау, я понял». Надеюсь, мой труд и мои знания будут полезны людям.
+
+                </p>
+                <a href="downloads/Otkrovenie_Strannika.pdf" class="download-link" target="_blank">Скачать PDF</a>
+                <a href="downloads/Markish_B_V_Probuzhdenie_Pervoe_otkrovenie_strannika.fb2" class="download-link" target="_blank">Скачать FB2</a>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <img src="img/Human Health Guide.png" alt="Human Health Guide" class="book-image">
+            <div class="book-details">
+                <h2 class="book-title">Human Health Guide</h2>
+                <p class="book-description">
+                    Автор: Harry B. Joseph  <br>
+                    Издательство: самиздат  <br>
+                    Год выпуска: ????  <br>
+                    Язык: английский  <br><br>
+
+                    Продукты, созданные человеком, повышают кислотность в организме, что способствует размножению бактерий и выработке избыточной слизи. Это может привести к заболеваниям и воспалениям. Щелочные продукты, такие как фрукты, овощи и растения, укрепляют здоровье и поддерживают микробиом кишечника. Они богаты питательными веществами и способствуют выработке энергии. Щелочность организма важна для здоровья. Исключая кислые продукты, мы улучшаем пищеварение и направляем энергию на другие цели.
+                </p>
+                <a href="downloads/Human_Health_Guide_by_Harry_B_Joseph_1.pdf" class="download-link" target="_blank">Скачать PDF</a>
+            </div>
+        </div>
+
+        <!-- Add more book cards here -->
+
+    </div>
+
+</body>
+</html>
